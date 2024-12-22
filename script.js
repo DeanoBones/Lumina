@@ -1,17 +1,56 @@
-const form = document.getElementById('passwordForm');
-const passwordInput = document.getElementById('passwordInput');
-const message = document.getElementById('message');
+document.addEventListener('DOMContentLoaded', function () {
+    const fakeWebsite = document.getElementById('fake-website');
+    const terminal = document.getElementById('tesla-terminal');
+    const passwordForm = document.getElementById('passwordForm');
+    const passwordInput = document.getElementById('passwordInput');
+    const message = document.getElementById('message');
+    
+    let keyHoldTimer;
+    let keyHoldStart = false;
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault(); // Prevents the form from refreshing the page
-    const enteredPassword = passwordInput.value.trim().toUpperCase(); // Converts user input to uppercase
-    const correctPassword = "TESLA"; // Replace with your desired password
+    // Event listener for holding 'T' key
+    window.addEventListener('keydown', function (e) {
+        if (e.key.toLowerCase() === 't' && !keyHoldStart) {
+            keyHoldStart = true;
+            keyHoldTimer = setTimeout(() => {
+                fakeWebsite.style.display = 'none';
+                terminal.style.display = 'block';
+                document.querySelector('.terminal-output').innerHTML = `
+                    <p>Initializing Tesla Terminal...</p>
+                    <p>Please wait...</p>
+                    <p>Connection successfully established...</p>
+                    <p>Receiving incoming transmission...</p>
+                `;
+                // Change terminal background to black
+                terminal.classList.add('black-background');
+                
+                // Delay to simulate loading, then show the password input
+                setTimeout(() => {
+                    document.getElementById('password-input').style.display = 'block'; // Show password box
+                }, 3000); // Delay of 3 seconds before showing the password box
+            }, 4000); // 4 seconds hold
+        }
+    });
 
-    if (enteredPassword === correctPassword) {
-        // Redirects to the next part of the game
-        window.location.href = "https://deanobones.github.io/Odysseus/";
-    } else {
-        // Shows an error message if the password is incorrect
-        message.textContent = "Access denied. Incorrect code.";
-    }
+    // Event listener for releasing 'T' key
+    window.addEventListener('keyup', function (e) {
+        if (e.key.toLowerCase() === 't') {
+            if (keyHoldTimer) {
+                clearTimeout(keyHoldTimer);
+                keyHoldStart = false;
+            }
+        }
+    });
+
+    passwordForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const enteredPassword = passwordInput.value.trim().toUpperCase();
+        const correctPassword = "TESLA";
+        
+        if (enteredPassword === correctPassword) {
+            window.location.href = "https://deanobones.github.io/Odysseus/"; // Redirect on correct password
+        } else {
+            message.textContent = "Access denied. Incorrect code.";
+        }
+    });
 });

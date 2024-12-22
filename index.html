@@ -3,20 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tesla Terminal</title>
+    <title>Wikipedia - Nikola Tesla</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="terminal">
+    <!-- Fake Tesla Wikipedia-like Website -->
+    <div id="fake-website" class="fake-website">
+        <header>
+            <h1>Nikola Tesla</h1>
+            <p class="subtitle">From Wikipedia, the free encyclopedia</p>
+        </header>
+        <article>
+            <section>
+                <h2>Early Life and Education</h2>
+                <p>Nikola Tesla was born on July 10, 1856, in Smiljan, Austrian Empire (modern-day Croatia). He was an ethnic Serb, and his father, a writer and a priest, was of Serbian origin. Tesla showed an early aptitude for mathematics and physics, and by 1875, he enrolled at the Technical University of Graz in Austria. His educational journey was marked by a profound curiosity, and he excelled in various scientific fields. The <span class="highlight">H</span>istory of the <span class="highlight">O</span>utput from early experiments laid the foundation for his groundbreaking work.</p>
+            </section>
+
+            <section>
+                <h2>Work on Electricity</h2>
+                <p>After moving to the United States in 1884, Tesla worked alongside Thomas Edison, developing direct current (DC) electrical systems. However, Tesla soon became a strong proponent of alternating current (AC), which he believed would be more efficient for transmitting electricity over long distances. This led to the "War of Currents" with Edison, who was invested in DC. Tesla believed in <span class="highlight">L</span>ong-distance power transmission using alternating current, which ultimately proved to be the future of the energy industry.</p>
+            </section>
+
+            <section>
+                <h2>Inventions and Legacy</h2>
+                <p>Tesla's innovations were groundbreaking, and his work in the development of AC power transmission, radio waves, and wireless communication paved the way for many modern technologies. Today, Tesla is regarded as one of the greatest inventors in history, and his contributions to science continue to impact technology, energy, and communication. The <span class="highlight">D</span>iscovery of wireless energy is one of his most visionary concepts, though it has yet to be fully realized in modern times.</p>
+            </section>
+
+            <section>
+                <h2>Press and Controversy</h2>
+                <p>Tesla's later years were marked by eccentric behavior, and he became somewhat of a reclusive figure. Many of his later inventions, like the Tesla Coil and wireless energy transmission, were not fully realized, leading to controversy about the true scope of his genius. Nevertheless, his legacy has been celebrated posthumously, and he is seen as a visionary inventor. His brilliant inventions, such as wireless energy transmission, would have significantly changed the world. Many of his ideas were ahead of their time, though they remain outstanding yet to be fully <span class="highlight">T</span>ested.</p>
+            </section>
+
+            <section>
+                <h2>Trivia</h2>
+                <ul>
+                    <li>Invented the Tesla Coil, which is still used in radio technology today.</li>
+                    <li>Held over 300 patents during his lifetime.</li>
+                    <li>Famously claimed to have received an idea for his alternating current system from a vision of a rotating sphere during his childhood.</li>
+                </ul>
+            </section>
+        </article>
+        <footer>
+            <p>Wikipedia contributors. Nikola Tesla. (2024, December). Wikipedia, The Free Encyclopedia.</p>
+        </footer>
+    </div>
+
+    <!-- Tesla Terminal Section (hidden initially) -->
+    <div id="tesla-terminal" class="terminal" style="display: none;">
         <div class="terminal-header">
             <span class="terminal-title">tesla@terminal:~$</span>
         </div>
         <div class="terminal-body">
-            <div class="terminal-output">
-                <p>Welcome to Tesla's Encrypted Network</p>
-                <p>Please enter the access code to proceed.</p>
+            <div class="terminal-output" id="terminal-output">
+                <p>Initializing Tesla Terminal...</p>
+                <p>Please wait...</p>
+                <p>Connection successfully established...</p>
+                <p>Receiving incoming transmission...</p>
+                <p>></p>
             </div>
-            <div class="terminal-input">
+            <div class="terminal-input" id="password-input" style="display: none;">
                 <form id="passwordForm">
                     <span class="prompt">></span>
                     <input type="password" id="passwordInput" placeholder="Enter access code" autofocus>
@@ -25,6 +70,7 @@
             </div>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

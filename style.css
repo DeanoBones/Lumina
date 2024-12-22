@@ -1,16 +1,102 @@
-/* General Terminal Styling */
+/* General styles for the Wikipedia page */
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    font-family: 'Courier New', Courier, monospace;
-    color: #00ff00;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
+.wiki-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #0056b3;
+}
+
+/* Style the hidden message */
+.hidden-message {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Style individual highlighted letters */
+.highlight {
+    color: #333; /* Default color */
+    display: inline-block;
+}
+
+/* Style for spaces between words */
+.space {
+    display: inline-block;
+}
+
+/* Change color when highlighted/selected */
+.highlight::selection {
+    background-color: #ffff00;  /* Yellow background on selection */
+    color: red;  /* Change text color when selected */
+}
+
+/* Style the fake wiki page (Tesla Wiki) */
+.fake-website {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.fake-website header {
+    text-align: center;
+    padding: 20px;
+}
+
+.fake-website header h1 {
+    font-size: 2.5rem;
+    color: #0056b3;
+}
+
+.fake-website header .subtitle {
+    font-style: italic;
+    color: #777;
+}
+
+.fake-website article {
+    margin-top: 30px;
+}
+
+.fake-website article section {
+    margin-bottom: 30px;
+}
+
+.fake-website article h2 {
+    font-size: 1.5rem;
+    color: #444;
+}
+
+.fake-website article p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.fake-website article ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.fake-website footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #777;
+    text-align: center;
+}
+
+/* Tesla Terminal Styles */
 .terminal {
     width: 80%;
     max-width: 800px;
@@ -19,6 +105,9 @@ body {
     background-color: black;
     overflow: hidden;
     box-shadow: 0 0 15px #00ff00;
+    color: #00ff00;
+    margin: 0 auto;
+    padding: 15px;
 }
 
 .terminal-header {
