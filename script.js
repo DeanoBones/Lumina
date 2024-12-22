@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 fakeWebsite.style.display = 'none';
                 terminal.style.display = 'block';
                 document.querySelector('.terminal-output').innerHTML = `
-                    <p>Initializing Secure Terminal...</p>
+                    <p>Accessing remote server...</p>
                     <p>Please wait...</p>
-                    <p>Connection successfully established...</p>
+                    <p>Initializing Secure Connection...</p>
                     <p>Booting Encryption Console...</p>
                 `;
                 // Change terminal background to black
