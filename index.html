@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla Terminal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal">
+        <div class="terminal-header">
+            <span class="terminal-title">tesla@terminal:~$</span>
+        </div>
+        <div class="terminal-body">
+            <div class="terminal-output">
+                <p>Welcome to Tesla's Encrypted Network</p>
+                <p>Please enter the access code to proceed.</p>
+            </div>
+            <div class="terminal-input">
+                <form id="passwordForm">
+                    <span class="prompt">></span>
+                    <input type="password" id="passwordInput" placeholder="Enter access code" autofocus>
+                </form>
+                <p id="message"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
