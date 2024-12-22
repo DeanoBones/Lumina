@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 fakeWebsite.style.display = 'none';
                 terminal.style.display = 'block';
                 document.querySelector('.terminal-output').innerHTML = `
-                    <p>Initializing Tesla Terminal...</p>
+                    <p>Initializing Secure Terminal...</p>
                     <p>Please wait...</p>
                     <p>Connection successfully established...</p>
-                    <p>Receiving incoming transmission...</p>
+                    <p>Booting Encryption Console...</p>
                 `;
                 // Change terminal background to black
                 terminal.classList.add('black-background');
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 setTimeout(() => {
                     document.getElementById('password-input').style.display = 'block'; // Show password box
                 }, 3000); // Delay of 3 seconds before showing the password box
-            }, 4000); // 4 seconds hold
+            }, 3000); // 3 seconds hold
         }
     });
 
