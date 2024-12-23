@@ -7,14 +7,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const terminalOutput = document.getElementById('terminal-output'); // Terminal output div
 
     const terminalMessages = [
-        "Syncing...",
-        "Cipher protocols initiating...",
-        "Your key lies wrapped in light's embrace,",
-        "Twist the blade to reveal its face.",
-        "Ancient methods guide the way,",
-        "Lumina's light keeps dark at bay.",
-        "Encryption complete."
-    ];
+    "Syncing...",
+    "Cipher protocols initiating...",
+    "Your key lies wrapped in light's embrace,",
+    "Twist the blade to reveal its face.",
+    "Ancient methods guide the way,",
+    "<a href='http://localhost:8000' target='_blank' style='color: #00ff00; text-decoration: none;'>Lumina</a>'s light keeps dark at bay.",
+    "Encryption complete."
+];
+
+
 
     let keyHoldTimer;
     let keyHoldStart = false;
@@ -27,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
         function displayNextMessage() {
             if (index < terminalMessages.length) {
                 const newLine = document.createElement('p');
-                newLine.textContent = terminalMessages[index];
+                newLine.innerHTML = terminalMessages[index];
                 terminalOutput.appendChild(newLine);
                 index++;
                 setTimeout(displayNextMessage, interval);
