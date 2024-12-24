@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
     passwordForm.addEventListener('submit', function (e) {
         e.preventDefault();
         const enteredPassword = passwordInput.value.trim().toUpperCase();  // Convert to uppercase for case-insensitive match
-        const correctPassword = 'TESLA'; // Correct password
+        const correctPassword = 'HELIOS'; // Correct password
 
         if (enteredPassword === correctPassword) {
             // Redirect to the webpage on correct password
