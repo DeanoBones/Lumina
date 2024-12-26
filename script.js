@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', function () {
     "Syncing...",
     "Cipher protocols initiating...",
     "Your key lies wrapped in light's embrace,",
-    "Twist the blade to reveal its face.",
-    "Ancient methods guide the way,",
-    "<a href='http://localhost:8000' target='_blank' style='color: #00ff00; text-decoration: none;'>Lumina</a>'s light keeps dark at bay.",
+    "Tracing the path with steady grace.",
+    "Always near, the answer is <a href='http://localhost:8000' target='_blank' style='color: #00ff00; text-decoration: none;'>bright</a>,",
+    "Lend your hand to unveil what's right.",
     "Encryption complete."
 ];
 
